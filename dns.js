@@ -121,8 +121,9 @@ console.log([
 ].join("\n"))
 
 require("dns").resolve(host, function (err, data) {
-	console.log("Started server on " + host + " (" + data.join(", ") + ") on port " + port);
-	console.log("\nDelegation:");
+	var revlookup = data ? " (" + data.join(", ") + ")" : "";
+
+	console.log("Delegation:");
 
 	Object.keys(dnx.records).forEach(function (d) {
 		console.log("\t=> ", d);
@@ -137,4 +138,6 @@ require("dns").resolve(host, function (err, data) {
 			})
 		});
 	})
+
+	process.stdout.write("\nStarted server: " + host + revlookup + ", using port " + port + ".");
 });
