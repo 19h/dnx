@@ -1,0 +1,9 @@
+{
+	"sly.mn": [{
+			"qtype": 1,
+			"qclass": 1,
+			"ttl": 299,
+			"rdlength": 4,
+			"rdata": "212.227.103.211"
+	}]
+}

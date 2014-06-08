@@ -96,17 +96,15 @@ server.addListener("error", function(e) {
 	throw e;
 });
 
-// TODO - create a more maintainable database
+var config = require("./config.json");
 
-var record = dnx.addRecord("sly.mn");
+Object.keys(config).forEach(function (e) {
+	var r = dnx.addRecord(e)
 
-record.delegate({
-	qtype: 1,
-	qclass: 1,
-	ttl: 299,
-	rdlength: 4,
-	rdata: "212.227.103.211"
-});
+	config[e].forEach(function (rx) {
+		r.delegate(rx);
+	})
+})
 
 server.bind(port, host);
 
