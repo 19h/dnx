@@ -1,0 +1,19 @@
+{
+  "name": "dnx",
+  "version": "0.1.0",
+  "description": "DNS server based on Node.js",
+  "main": "dns.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KenanSulayman/dnx.git"
+  },
+  "author": "Kenan Sulayman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KenanSulayman/dnx/issues"
+  },
+  "homepage": "https://github.com/KenanSulayman/dnx"
+}
